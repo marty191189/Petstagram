@@ -14,8 +14,23 @@ Including another URLconf
     2. Add a URL to urlpatterns:  path('blog/', include('blog.urls'))
 """
 from django.contrib import admin
-from django.urls import path
+from django.urls import path, include
 
 urlpatterns = [
     path('admin/', admin.site.urls),
+    path('', include('petstagram.common.urls')),
+    path('accounts/', include('petstagram.accounts.urls')),
+    path('pets/', include('petstagram.pets.urls')),
+    path('photos/', include('petstagram.photos.urls')),
 ]
+
+'''
+
+After 'startapp APP_NAME'
+
+1. Create 'APP_NAME/urls.py' with empty 'urlpatters'
+2. Include 'APP_NAME/urls.py' into project's urls.py
+3. Add 'APP_NAME' to 'INSTALLED_APPS' in settings.py
+4. Open every app's dir -> apps.py and change 'name' = APP_NAME to 'name' = PROJECT.APP_NAME
+
+'''
