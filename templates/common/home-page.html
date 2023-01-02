@@ -313,7 +313,7 @@
                 <div class="top">
                     <!-- User Details and image location -->
                     <div class="userDetails">
-                        <a href="{% url 'details user' pk=3 %}">
+                        <a href="{% url 'details user' pk=2 %}">
                             <div class="profilepic">
                                 <div class="profile_img">
                                     <div class="image">
@@ -323,7 +323,7 @@
                             </div>
                         </a>
                         <h3>
-                            <a href="profile details">
+                            <a href="{% url 'details user' pk=2 %}">
                                 <!-- if user has first name and last name -->
                                 Steven Ivanov
                                 <!-- else -->
